@@ -11,7 +11,7 @@
 - Files, Python, and command line: Confirmed (python3 3.13.18)
 - Node.js and npx: Confirmed (node v22.23.4, npx 10.9.9)
 - Selected skill-capable host: Pending
-- Install scope: Pending
+- Install scope: User (~/.claude/skills/)
 - Phase 13 Lesson 01 refresher: Pending
 - Phase 13 Lesson 05 refresher: Pending
 - `tool-poisoning-and-untrusted-instructions`: Pending
@@ -27,3 +27,5 @@
 
 ## Notes
 - Reverse Engineering route requested too; start it after this session with /learn-reverse-engineering.
+- Learner wants every artifact and observation pushed to branch learner/agent-skills-progress (PR #1). Workspace: learning-artifacts/agent-skills-first-run/.
+- 2026-11-12: Chose user scope so the installed reviewer bundle stays outside the repo; evidence is committed instead.
