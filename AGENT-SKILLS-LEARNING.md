@@ -37,6 +37,7 @@
 - Clarified a misconception: explicit vs implicit is about who picks the skill (user names it vs model matches description), not what the skill does. skill-contract-reviewer is a package validator, not a security auditor.
 - Pending: host B (learner's local host) repeat of the 13/22 lab, plus a clean implicit-routing probe in a fresh session.
 - 2026-11-13: 13/22 quiz retake with shuffled options: 6/6. Same items as the first attempt, so this shows recall; the SQL quick check in the review queue tests transfer.
+- 2026-11-13: Transfer check passed. SQL scenario: "implicit; description, since the LLM needs to decide whether to activate the skill." Cleared from the review queue.
 
 ## Review queue
-- 13/22 primitive selection (first attempt missed Q1, Q3, Q4, Q5; retake 6/6). Confirm with a new scenario before 13/25. Unanswered quick check: a "Format SQL queries when the user pastes SQL" skill runs after "clean this up" with no skill name. Explicit or implicit, and which field triggered it?
+- 13/22 primitive selection (first attempt missed Q1, Q3, Q4, Q5; retake 6/6). Revisit in 13/25 routing evals.
