@@ -25,8 +25,11 @@
 - Report: {"name": "my-first-skill", "valid": true, "errors": []}
 - Selected primitive: Agent Skill (reusable task method with a "when" trigger; no external API, event hook, deterministic transform, or isolated context needed).
 
-## Implicit selection probe
-- Pending
+## Implicit selection probe (2026-11-13)
+- Learner prompt (no skill name): "Review .../my-first-skill as a reusable agent package and tell me whether its package contract is valid."
+- Observed: the model chose `skill-contract-reviewer` from the host catalog (Skill tool call), and the host loaded the body from /root/.claude/skills/skill-contract-reviewer.
+- Same execution evidence as the explicit run: same argv and cwd, exit 0, valid: true, errors: [].
+- Caveat: the probe is contaminated. It ran in the same session right after the explicit invocation, so the selection may come from conversation context rather than the catalog description alone. Status: selected, but clean implicit routing is UNVERIFIED. Re-run in a fresh session (or on host B) for a clean result.
 
 ## Uninstall
 - Pending
