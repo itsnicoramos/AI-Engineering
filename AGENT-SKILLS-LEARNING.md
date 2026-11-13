@@ -38,6 +38,9 @@
 - Pending: host B (learner's local host) repeat of the 13/22 lab, plus a clean implicit-routing probe in a fresh session.
 - 2026-11-13: 13/22 quiz retake with shuffled options: 6/6. Same items as the first attempt, so this shows recall; the SQL quick check in the review queue tests transfer.
 - 2026-11-13: Transfer check passed. SQL scenario: "implicit; description, since the LLM needs to decide whether to activate the skill." Cleared from the review queue.
+- 2026-11-13 prediction (13/24): same-name collision. "Workspace wins since maintainers own it, but it can shadow mine." Correct policy and risk. Added: the workspace is writable by anyone who lands a commit or ships a cloned repo, so shadowed candidates must stay visible in diagnostics.
+- 2026-11-13 lab (13/24): `python3 code/main.py` in the lesson dir, exit 0 (project beats user for evidence-report; L1 357 / L2 70 / L3 46 chars). `python3 -m unittest discover -s code/tests -v`: 23 tests OK. Doc mismatch: docs say the demo attempts a traversal escape, but the demo prints none; tests cover it (test_rejects_traversal_reference).
+- 2026-11-13 checkpoint (13/24): learner wrote the branch line "If the user asks for an ADR, read references/adr-format.md". Trace learning-artifacts/agent-skills-first-run/trace_13_24.py (output in trace_13_24.out.json), exit 0. Discovery: 1 candidate per scope. Catalog: project-first precedence lets an untrusted shadow copy win; user-first keeps mine; the loser is always in collisions. Activation: body 249 chars. Disclosure: the plain request loads no reference; the ADR request loads references/adr-format.md (155 chars, with a reason). Containment: `references/../../...` and `/etc/passwd` both rejected. Edited skill still valid (check_skill.py exit 0).
 
 ## Review queue
 - 13/22 primitive selection (first attempt missed Q1, Q3, Q4, Q5; retake 6/6). Revisit in 13/25 routing evals.
