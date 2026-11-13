@@ -31,5 +31,14 @@
 - Same execution evidence as the explicit run: same argv and cwd, exit 0, valid: true, errors: [].
 - Caveat: the probe is contaminated. It ran in the same session right after the explicit invocation, so the selection may come from conversation context rather than the catalog description alone. Status: selected, but clean implicit routing is UNVERIFIED. Re-run in a fresh session (or on host B) for a clean result.
 
-## Uninstall
-- Pending
+## Uninstall (2026-11-13)
+- cwd: /home/user/AI-Engineering/learning-artifacts/agent-skills-first-run
+- argv: npx -y skills remove skill-contract-reviewer -g -a claude-code -y
+- exit code: 0. Installer: "Successfully removed 1 skill(s)"
+- `test -e /root/.claude/skills/skill-contract-reviewer` exit 1, so the directory is gone
+- Only skill-contract-reviewer was removed: `skills list -g` still shows session-start-hook, and ~/.claude/skills still holds session-start-hook and synced
+- my-first-skill/SKILL.md untouched in TARGET_ROOT
+- Post-removal explicit request in the same session: host returned "Unknown skill: skill-contract-reviewer". The catalog dropped it without a restart.
+
+## Checkpoint summary (host A)
+- Create: done. Install: done. Discovery: observed (hot reload). Explicit invocation: done, with full argv/cwd/exit evidence. Implicit selection: selected, clean routing unverified (contaminated by context). Uninstall: done and verified.
