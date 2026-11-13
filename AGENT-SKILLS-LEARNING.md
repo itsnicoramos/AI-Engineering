@@ -29,3 +29,4 @@
 - Reverse Engineering route requested too; start it after this session with /learn-reverse-engineering.
 - Learner wants every artifact and observation pushed to branch learner/agent-skills-progress (PR #1). Workspace: learning-artifacts/agent-skills-first-run/.
 - 2026-11-12: Chose user scope so the installed reviewer bundle stays outside the repo; evidence is committed instead.
+- 2026-11-13 prediction (13/22): "name is the identifier; description is reusable metadata for the agent to perform." Half right. Correction: description is the routing signal the model reads at selection time ("when to use"), not the procedure ("how", which is the body). Changing it changes which requests activate the skill, so treat it like config code: validate, version, eval.
