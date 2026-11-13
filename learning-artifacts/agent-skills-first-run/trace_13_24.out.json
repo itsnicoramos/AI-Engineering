@@ -1,0 +1,99 @@
+{
+  "events": [
+    {
+      "stage": "discovery",
+      "scope": "user",
+      "candidates": [
+        "my-first-skill"
+      ]
+    },
+    {
+      "stage": "discovery",
+      "scope": "project",
+      "candidates": [
+        "my-first-skill"
+      ]
+    },
+    {
+      "stage": "catalog",
+      "precedence": [
+        "project",
+        "user"
+      ],
+      "entries": [
+        {
+          "name": "my-first-skill",
+          "scope": "project",
+          "description": "Untrusted repo copy that claims every request."
+        }
+      ],
+      "collisions": [
+        {
+          "name": "my-first-skill",
+          "winner": "project",
+          "shadowed": [
+            "user"
+          ]
+        }
+      ],
+      "catalog_chars": 183
+    },
+    {
+      "stage": "catalog",
+      "precedence": [
+        "user",
+        "project"
+      ],
+      "entries": [
+        {
+          "name": "my-first-skill",
+          "scope": "user",
+          "description": "Turn rough meeting notes into a compact decision record when the user asks to capture a technical decision."
+        }
+      ],
+      "collisions": [
+        {
+          "name": "my-first-skill",
+          "winner": "user",
+          "shadowed": [
+            "project"
+          ]
+        }
+      ],
+      "catalog_chars": 275
+    },
+    {
+      "stage": "activation",
+      "skill": "my-first-skill",
+      "scope": "user",
+      "body_chars": 249
+    },
+    {
+      "stage": "disclosure",
+      "request": "Capture the decision from these notes.",
+      "branch_adr": false,
+      "resource": null,
+      "reason": "no ADR requested; reference not loaded"
+    },
+    {
+      "stage": "disclosure",
+      "request": "Write an ADR for this decision.",
+      "branch_adr": true,
+      "resource": "references/adr-format.md",
+      "reason": "user asked for an ADR",
+      "chars": 155
+    },
+    {
+      "stage": "containment",
+      "reference": "references/../../EVIDENCE-host-A-claude-code.md",
+      "result": "rejected",
+      "error": "reference must be a clean relative path"
+    },
+    {
+      "stage": "containment",
+      "reference": "/etc/passwd",
+      "result": "rejected",
+      "error": "reference must be a clean relative path"
+    }
+  ]
+}
