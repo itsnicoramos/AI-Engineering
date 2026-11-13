@@ -20,7 +20,7 @@
 | Order | Lesson | Status | Evidence | Completed |
 |---:|---|---|---|---|
 | 1 | 13/22 Portable contract and runtime boundary | Done | Host A (Claude Code): install exit 0, hot-reload discovery, explicit run of check_skill.py exit 0 valid, implicit probe selected but unverified, uninstall verified ("Unknown skill"). See learning-artifacts/agent-skills-first-run/EVIDENCE-host-A-claude-code.md. Quiz 2/6, retake 6/6 | 2026-11-13 |
-| 2 | 13/24 Discovery and progressive disclosure | Next | | |
+| 2 | 13/24 Discovery and progressive disclosure | In progress | | |
 | 3 | 13/25 Invocation and routing | Locked | | |
 | 4 | 13/26 Permissions, sandboxes, and trust | Locked | | |
 | 5 | 13/27 Evals, packaging, and portability | Locked | | |
