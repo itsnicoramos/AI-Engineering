@@ -19,7 +19,7 @@
 ## Progress
 | Order | Lesson | Status | Evidence | Completed |
 |---:|---|---|---|---|
-| 1 | 13/22 Portable contract and runtime boundary | Done | Host A (Claude Code): install exit 0, hot-reload discovery, explicit run of check_skill.py exit 0 valid, implicit probe selected but unverified, uninstall verified ("Unknown skill"). See learning-artifacts/agent-skills-first-run/EVIDENCE-host-A-claude-code.md. Quiz 2/6 | 2026-11-13 |
+| 1 | 13/22 Portable contract and runtime boundary | Done | Host A (Claude Code): install exit 0, hot-reload discovery, explicit run of check_skill.py exit 0 valid, implicit probe selected but unverified, uninstall verified ("Unknown skill"). See learning-artifacts/agent-skills-first-run/EVIDENCE-host-A-claude-code.md. Quiz 2/6, retake 6/6 | 2026-11-13 |
 | 2 | 13/24 Discovery and progressive disclosure | Next | | |
 | 3 | 13/25 Invocation and routing | Locked | | |
 | 4 | 13/26 Permissions, sandboxes, and trust | Locked | | |
@@ -36,6 +36,7 @@
 - Weak spot: choosing a primitive by responsibility. Keyword table: event -> hook; reusable method -> skill; external API -> MCP tool; repo conventions -> AGENTS.md; deterministic -> code; isolated context -> subagent; one-off -> prompt.
 - Clarified a misconception: explicit vs implicit is about who picks the skill (user names it vs model matches description), not what the skill does. skill-contract-reviewer is a package validator, not a security auditor.
 - Pending: host B (learner's local host) repeat of the 13/22 lab, plus a clean implicit-routing probe in a fresh session.
+- 2026-11-13: 13/22 quiz retake with shuffled options: 6/6. Same items as the first attempt, so this shows recall; the SQL quick check in the review queue tests transfer.
 
 ## Review queue
-- 13/22 primitive selection (quiz Q1, Q3, Q4, Q5). Unanswered quick check: a "Format SQL queries when the user pastes SQL" skill runs after "clean this up" with no skill name. Explicit or implicit, and which field triggered it?
+- 13/22 primitive selection (first attempt missed Q1, Q3, Q4, Q5; retake 6/6). Confirm with a new scenario before 13/25. Unanswered quick check: a "Format SQL queries when the user pastes SQL" skill runs after "clean this up" with no skill name. Explicit or implicit, and which field triggered it?
